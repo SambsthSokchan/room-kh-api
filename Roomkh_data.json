@@ -1,0 +1,231 @@
+{
+  "auth": {
+    "registerStudent": {
+      "fullName": "Sok Dara",
+      "email": "dara.test@rupp.edu.kh",
+      "phoneNumber": "012888999",
+      "password": "password123",
+      "confirmPassword": "password123",
+      "userSegment": "STUDENT",
+      "language": "KHMER",
+      "university": "Royal University of Phnom Penh",
+      "faculty": "Computer Science",
+      "studyYear": 3
+    },
+    "registerWorker": {
+      "fullName": "Chan Meas",
+      "email": "meas.test@canadiabank.com.kh",
+      "phoneNumber": "012888998",
+      "password": "password123",
+      "confirmPassword": "password123",
+      "userSegment": "WORKER",
+      "language": "KHMER",
+      "workplace": "Canadia Bank Headquarters",
+      "jobPosition": "Accountant",
+      "occupation": "Banking"
+    },
+    "registerLandlordCandidate": {
+      "fullName": "Chea Vichea",
+      "email": "vichea.landlord@example.com",
+      "phoneNumber": "012888997",
+      "password": "password123",
+      "confirmPassword": "password123",
+      "userSegment": "OTHER",
+      "language": "KHMER"
+    },
+    "loginStudent": {
+      "email": "dara.test@rupp.edu.kh",
+      "password": "password123"
+    },
+    "loginWorker": {
+      "email": "meas.test@canadiabank.com.kh",
+      "password": "password123"
+    },
+    "loginLandlord": {
+      "email": "vichea.landlord@example.com",
+      "password": "password123"
+    },
+    "loginAdmin": {
+      "email": "admin@roomkh.com",
+      "password": "Admin1234!"
+    }
+  },
+  "landlordUpgrade": {
+    "submitRequest": {
+      "businessName": "Vichea Modern Apartment",
+      "businessType": "INDIVIDUAL",
+      "idCardType": "NATIONAL_ID",
+      "idCardNumber": "123456789",
+      "idCardFrontUrl": "https://storage.roomkh.com/ids/front.jpg",
+      "idCardBackUrl": "https://storage.roomkh.com/ids/back.jpg",
+      "propertyAddress": "St. 271, Toul Kork, Phnom Penh",
+      "contactPhone": "+85512000002",
+      "contactEmail": "vichea.landlord@example.com"
+    },
+    "approveRequest": {
+      "action": "APPROVE",
+      "reviewNotes": "All business documents and ID verified"
+    },
+    "rejectRequest": {
+      "action": "REJECT",
+      "reviewNotes": "ID card photo is blurry. Please re-upload clearer photos."
+    }
+  },
+  "rooms": {
+    "createStudioRoom": {
+      "roomTitle": "Modern Studio near RUPP & ITC",
+      "roomType": "STUDIO",
+      "monthlyRent": 180.00,
+      "depositAmount": 180.00,
+      "roomSizeSqm": 28.5,
+      "bedroomCount": 1,
+      "bathroomCount": 1,
+      "maxOccupants": 2,
+      "description": "Clean, quiet studio with high-speed WiFi, AC, and motorbike parking.",
+      "addressLine": "St. 118, Teuk Laak 1",
+      "district": "Toul Kork",
+      "city": "Phnom Penh",
+      "latitude": 11.5694,
+      "longitude": 104.8912,
+      "photos": [
+        {
+          "photoUrl": "https://storage.roomkh.com/rooms/1-main.jpg",
+          "displayOrder": 1,
+          "isCover": true
+        },
+        {
+          "photoUrl": "https://storage.roomkh.com/rooms/1-bathroom.jpg",
+          "displayOrder": 2,
+          "isCover": false
+        }
+      ],
+      "facilityIds": [1, 2, 3]
+    },
+    "createOneBedroomRoom": {
+      "roomTitle": "Cozy 1-Bedroom Apartment in BKK1",
+      "roomType": "ONE_BEDROOM",
+      "monthlyRent": 280.00,
+      "depositAmount": 280.00,
+      "roomSizeSqm": 45.0,
+      "bedroomCount": 1,
+      "bathroomCount": 1,
+      "maxOccupants": 3,
+      "description": "Fully furnished apartment with balcony, elevator, and 24/7 security.",
+      "addressLine": "St. 310, Boeung Keng Kang 1",
+      "district": "Boeung Keng Kang",
+      "city": "Phnom Penh",
+      "latitude": 11.5498,
+      "longitude": 104.9245,
+      "photos": [
+        {
+          "photoUrl": "https://storage.roomkh.com/rooms/2-main.jpg",
+          "displayOrder": 1,
+          "isCover": true
+        }
+      ],
+      "facilityIds": [1, 2, 4, 5]
+    }
+  },
+  "bookings": {
+    "requestBooking": {
+      "roomId": 1,
+      "moveInDate": "2026-12-01",
+      "moveOutDate": "2027-11-30",
+      "tenantHeadcount": 1,
+      "specialRequest": "Prefer a room away from the street"
+    }
+  },
+  "contracts": {
+    "createContract": {
+      "bookingId": 1,
+      "startDate": "2026-12-01",
+      "endDate": "2027-11-30",
+      "monthlyRent": 180.00,
+      "depositAmount": 180.00,
+      "termsNote": "Standard 1-year contract"
+    },
+    "closeContract": {
+      "status": "ENDED",
+      "reason": "Lease ended normally"
+    }
+  },
+  "payments": {
+    "issueBill": {
+      "contractId": 1,
+      "paymentMonth": "2026-12-01",
+      "rentAmount": 180.00,
+      "waterFee": 5.00,
+      "electricityFee": 15.00,
+      "otherFee": 0.00,
+      "notes": "December 2026 rent and utilities"
+    },
+    "markPaidAba": {
+      "paymentMethod": "ABA_PAY",
+      "transactionReference": "ABA-TXN-20261201-9988"
+    },
+    "markPaidWing": {
+      "paymentMethod": "WING",
+      "transactionReference": "WING-20261201-7766"
+    },
+    "markPaidCash": {
+      "paymentMethod": "CASH",
+      "transactionReference": "CASH-REC-001"
+    }
+  },
+  "admin": {
+    "approveRoom": {
+      "decision": "APPROVED",
+      "moderationNote": "Photos and listing meet community standards"
+    },
+    "rejectRoom": {
+      "decision": "REJECTED",
+      "moderationNote": "Missing actual photos of the bathroom and exterior"
+    },
+    "suspendUser": {
+      "actionType": "SUSPEND",
+      "managementNote": "Temporary suspension pending policy compliance"
+    },
+    "activateUser": {
+      "actionType": "ACTIVATE",
+      "managementNote": "Account reviewed and reactivated"
+    },
+    "sendBroadcast": {
+      "targetAudience": "STUDENTS",
+      "subject": "RoomKH Student Promo 2026",
+      "body": "Find verified student rooms near RUPP, ITC, and NUM."
+    }
+  },
+  "ratingsAndComments": {
+    "rateRoom": {
+      "roomId": 1,
+      "ratingValue": 5,
+      "ratingComment": "Quiet, clean, and 5 minutes walk from RUPP campus."
+    },
+    "postComment": {
+      "roomId": 1,
+      "commentText": "Does the room include motorbike parking in the monthly rent?"
+    }
+  },
+  "reportsAndSupport": {
+    "submitRoomReport": {
+      "roomId": 1,
+      "reportReason": "Inaccurate rent price",
+      "reportDescription": "Listed as $150, but landlord requested $180.",
+      "reportEvidenceUrl": "https://storage.roomkh.com/evidence/chat.png"
+    },
+    "submitDispute": {
+      "landlordId": 1,
+      "roomId": 1,
+      "disputeType": "DEPOSIT_REFUND",
+      "disputeDescription": "Landlord did not return deposit upon moving out."
+    },
+    "submitSupport": {
+      "supportSubject": "Cannot upload payment receipt",
+      "supportDescription": "Error occurs on 4G mobile network."
+    },
+    "reviewReport": {
+      "status": "APPROVED",
+      "reviewNote": "Case reviewed and resolved."
+    }
+  }
+}
